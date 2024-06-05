@@ -24,6 +24,7 @@ pipeline{
             steps{
                 script{
                     withSonarQubeEnv('SQ')
+                    sh 'mvn sonar:sonar -Dsonar.projectName=Test2 -Dsonar.projectKey=Test2'
                 }
             }
         }
