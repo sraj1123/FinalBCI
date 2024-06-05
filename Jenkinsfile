@@ -21,7 +21,7 @@ pipeline {
 				stage('Sonar Scan') {
 					steps {
 						script {
-						withSonarQubeEnv(credentialsId: 'SQ') {
+						withSonarQubeEnv(credentialsId: 'SonarQube_Token') {
 						sh 'mvn sonar:sonar -Dsonar.projectName=Test2 -Dsonar.projectKey=Test2'
 								}
 							}
