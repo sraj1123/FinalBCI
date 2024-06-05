@@ -7,7 +7,7 @@ pipeline{
     stages{
 
         stage('Git Clone'){
-            script{
+            steps{
                 git branch: 'master', url: 'https://github.com/csiripurapu/mvnproject'
             }
         }
